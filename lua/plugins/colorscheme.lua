@@ -14,9 +14,6 @@ return {
       require("tokyonight").setup(opts)
       vim.cmd("colorscheme tokyonight-moon")
     end,
-  },
-  {
-    "rebelot/kanagawa.nvim",
-    lazy = false,
+   
   },
 }
