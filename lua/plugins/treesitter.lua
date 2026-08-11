@@ -7,15 +7,8 @@ return {
     local tree_config = require('nvim-treesitter')
       tree_config.setup {
         -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
-        install_dir = vim.fn.stdpath('data') .. '/site'
-      }
-
-      tree_config.install{
-        'rust', 
-        'javascript', 
-        'zig',
-        'lua',
-        'python'
+        install_dir = vim.fn.stdpath('data') .. '/site',
+        auto_install = true
       }
 
       vim.api.nvim_create_autocmd('FileType', {
