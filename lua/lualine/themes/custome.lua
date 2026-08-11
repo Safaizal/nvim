@@ -6,10 +6,10 @@ local colors = {
   black4       = '#999999',
   white        = '#ffffff',
   white1       = '#aaaaaa',
-  red          = '#ff0000',
-  green        = '#00aa00',
-  blue         = '#0d0dbf',
-  yellow       = '#999900',
+  red          = '#aa1100',
+  green        = '#11aa00',
+  blue         = '#1100aa',
+  yellow       = '#ffcc00',
   amanojaku    = '#00ff11',
 }
 return {
