@@ -1,5 +1,5 @@
 return {
-	{
+  {
 		"mason-org/mason.nvim",
 		opts = {},
 	},
@@ -13,8 +13,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			vim.lsp.enable("lua_ls", "vtsls", "cssls", "biome")
-			vim.keymap.set("n", "I", vim.lsp.buf.hover, {})
+			vim.lsp.enable("lua_ls", "vitals", "css", "biome", "python")
+      vim.keymap.set("n", "I", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "D", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 		end,

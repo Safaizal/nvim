@@ -31,8 +31,17 @@ return {
           end,
         },
         window = {
-          completion = cmp.config.window.bordered(),
-          documentation = cmp.config.window.bordered(),
+          completion = cmp.config.window.bordered({
+            border = "rounded",
+            winhighlight = "Normal:Pmenu,FloatBorder:PmenuBorder,CursorLine:PmenuSel,Search:None",
+            winblend = 15,
+          }),
+          documentation = cmp.config.window.bordered({
+            border = "rounded",
+            winhighlight = "Normal:Pmenu,FloatBorder:PmenuBorder,CursorLine:PmenuSel,Search:None",
+            winblend = 20,
+          }),
+          snippet = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -43,13 +52,17 @@ return {
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp' }, -- this is reponsible for the  interaction between nvim lsps and nvim-cmp.
-          -- { name = 'luasnip' }, -- For luasnip users.
+          { name = 'luasnip' }, -- For luasnip users.
           -- { name = 'ultisnips' }, -- For ultisnips users.
           -- { name = 'snippy' }, -- For snippy users.
         }, {
           { name = 'buffer' },
         })
       })
+      -- Set custom hex colors for the popup border and selection item
+      vim.api.nvim_set_hl(0, "PmenuBorder", { fg = "#ffffff" })
+      vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "PmenuSel",    { bg = "#000000", fg = "#00ff11", bold = true }) -- Selected item
     end
   }
 }
