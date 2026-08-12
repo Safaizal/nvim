@@ -5,16 +5,10 @@ return {
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"lua_ls",
-					"vtsls",
-					"cssls",
-					"biome",
-				},
-			})
-		end,
+    lazy = false,
+    opts = {
+      auto_install = true
+    }
 	},
 	{
 		"neovim/nvim-lspconfig",
