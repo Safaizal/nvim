@@ -7,18 +7,18 @@ return {
 		config = function()
 			require("black-metal").setup({
 				colors = {
-          comment  = "#5c6370",
-          keyword  = "#eeeeee",
-          func     = "#70f3ff",
-          string   = "#a9ff68",
-          type     = "#5af78e",
-          constant = "#ffd166",
+					comment = "#5c6370",
+					keyword = "#eeeeee",
+					func = "#70f3ff",
+					string = "#a9ff68",
+					type = "#5af78e",
+					constant = "#ffd166",
 					variable = "#dddddd",
 					operator = "#aa1100",
-					number   = "#999999",
-					boolean  = "#1100bb",
-          accent   = "#00ff66",
-          border   = "#00ff66",
+					number = "#999999",
+					boolean = "#1100bb",
+					accent = "#00ff66",
+					border = "#00ff66",
 				},
 
 				highlights = {
@@ -68,27 +68,44 @@ return {
 					["@constant.builtin"] = { fg = "$constant" },
 					["@constant.macro"] = { fg = "$constant" },
 
-          ["@lsp.type.class"]          = { fg = "$type" },
-          ["@lsp.type.decorator"]      = { fg = "$func" },
-          ["@lsp.type.enum"]           = { fg = "$type" },
-          ["@lsp.type.enumMember"]     = { fg = "$constant" },
-          ["@lsp.type.function"]       = { fg = "$func" },
-          ["@lsp.type.interface"]      = { fg = "$type" },
-          ["@lsp.type.macro"]          = { fg = "$func" },
-          ["@lsp.type.method"]         = { fg = "$func" },
-          ["@lsp.type.namespace"]      = { fg = "$type" },
-          ["@lsp.type.parameter"]      = { fg = "$variable" },
-          ["@lsp.type.property"]       = { fg = "$variable" },
-          ["@lsp.type.struct"]         = { fg = "$type" },
-          ["@lsp.type.type"]           = { fg = "$type" },
-          ["@lsp.type.typeParameter"]  = { fg = "$type" },
-          ["@lsp.type.variable"]       = { fg = "$variable" },
+					["@lsp.type.class"] = { fg = "$type" },
+					["@lsp.type.decorator"] = { fg = "$func" },
+					["@lsp.type.enum"] = { fg = "$type" },
+					["@lsp.type.enumMember"] = { fg = "$constant" },
+					["@lsp.type.function"] = { fg = "$func" },
+					["@lsp.type.interface"] = { fg = "$type" },
+					["@lsp.type.macro"] = { fg = "$func" },
+					["@lsp.type.method"] = { fg = "$func" },
+					["@lsp.type.namespace"] = { fg = "$type" },
+					["@lsp.type.parameter"] = { fg = "$variable" },
+					["@lsp.type.property"] = { fg = "$variable" },
+					["@lsp.type.struct"] = { fg = "$type" },
+					["@lsp.type.type"] = { fg = "$type" },
+					["@lsp.type.typeParameter"] = { fg = "$type" },
+					["@lsp.type.variable"] = { fg = "$variable" },
 				},
 
 				theme = "thyrfing",
 				trve = true, -- switch this to false if you want light variants
 			})
 			require("black-metal").load()
+		end,
+	},
+	{
+		"brenoprata10/nvim-highlight-colors",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			render = "background",
+			enable_hex = true,
+			enable_rgb = true,
+			enable_hsl = true,
+			enable_var_usage = true,
+			enable_named_colors = true,
+			enable_tailwind = true,
+		},
+		config = function(_, opts)
+			require("nvim-highlight-colors").setup(opts)
 		end,
 	},
 }
