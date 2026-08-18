@@ -56,10 +56,4 @@ return {
 			},
 		},
 	},
-  image = {
-
-  },
-  notifier = {
-
-  },
 }

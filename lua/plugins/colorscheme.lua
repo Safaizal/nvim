@@ -1,5 +1,4 @@
 return {
-	-- Using lazy.nvim
 	{
 		"metalelf0/black-metal-theme-neovim",
 		lazy = false,
@@ -22,7 +21,6 @@ return {
 				},
 
 				highlights = {
-					-- Full Treesitter Capture Groups (Cross-Language)
 					["@comment"] = { fg = "$comment", italic = true },
 					["@string"] = { fg = "$string" },
 					["@string.regex"] = { fg = "$string" },
