@@ -8,9 +8,9 @@ return {
       tree_config.setup {
         -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
         install_dir = vim.fn.stdpath('data') .. '/site',
-        auto_install = true
+        auto_install = true,
+        indent = true,
       }
-
       vim.api.nvim_create_autocmd('FileType', {
         pattern = { '<filetype>' },
         callback = function()

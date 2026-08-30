@@ -87,6 +87,7 @@ return {
 				trve = true, -- switch this to false if you want light variants
 			})
 			require("black-metal").load()
+      vim.api.nvim_set_hl(0, "Visual", { fg = "#111111", bg = "#999999" })
 		end,
 	},
 	{
