@@ -2,7 +2,7 @@
 
 A blazingly fast, heavily customized Neovim configuration built with [lazy.nvim](https://github.com/folke/lazy.nvim). Tailored for a VS Code-like experience.
 
-![Neovim Setup Showcase](images/img1.png)
+![Neovim Setup Showcase](images/nvim.png)
 
 <hr>
 
