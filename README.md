@@ -78,6 +78,7 @@ My configuration is broken down into modular files for easy maintenance:
   │   │   ├── indent-backline.lua
   │   │   ├── lsp-config.lua
   │   │   ├── lualine.lua
+  │   │   ├── ipynb.lua
   │   │   ├── neotree.lua
   │   │   ├── noitfy.lua
   │   │   ├── none_ls.lua

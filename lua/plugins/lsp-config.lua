@@ -11,7 +11,6 @@ return {
       "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
-      -- Safely load cmp capabilities to ensure your completions work with LSP
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       local has_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
       if has_cmp then
