@@ -42,12 +42,12 @@ Before installing this config, ensure you have the following installed on your s
    mv ~/.local/share/nvim ~/.local/share/nvim.bak
 
 2. **Clone this repository:**
-    ```Bash
+    ```bash
     cd ~/.config
     git clone https://github.com/Safaizal/nvim.git
 
 3. Start Neovim:
-    ```Bash
+    ```bash
     nvim
 
 lazy.nvim will automatically bootstrap and install all plugins. Mason will automatically download the language servers.
@@ -79,6 +79,7 @@ My configuration is broken down into modular files for easy maintenance:
   │   │   ├── lsp-config.lua
   │   │   ├── lualine.lua
   │   │   ├── ipynb.lua
+  │   │   ├── render-markdown.lua
   │   │   ├── neotree.lua
   │   │   ├── noitfy.lua
   │   │   ├── none_ls.lua

@@ -26,7 +26,7 @@ return {
           "html",
           "vtsls",
           "clangd",
-          "harper_ls"
+          "harper_ls",
         },
         automatic_installation = true,
         handlers = {
