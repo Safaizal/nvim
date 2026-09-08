@@ -1,0 +1,28 @@
+# Lazy.nvim directories
+.lazy/
+.mason/
+
+# Neovim data directories
+data/
+state/
+log/
+colors/
+
+# Swap files
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Backup files
+*.bak
+*.backup

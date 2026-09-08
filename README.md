@@ -1,6 +1,17 @@
 # My Neovim Configuration
 
-A blazingly fast, heavily customized Neovim configuration built with [lazy.nvim](https://github.com/folke/lazy.nvim). Tailored for a VS Code-like experience.
+<div align="center">
+
+![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
+![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
+![License](https://img.shields.io/github/license/Safaizal/nvim?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/Safaizal/nvim?style=for-the-badge)
+
+**A blazingly fast, heavily customized Neovim configuration built with lazy.nvim.**
+
+*Tailored for a VS Code-like experience with modern development workflows.*
+
+</div>
 
 ![Neovim Setup Showcase](images/nvim.png)
 
