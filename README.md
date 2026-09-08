@@ -2,10 +2,10 @@
 
 <div align="center">
 
-![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
-![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
-![License](https://img.shields.io/github/license/Safaizal/nvim?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/Safaizal/nvim?style=for-the-badge)
+![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=flat&logo=neovim)
+![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=flat&logo=lua)
+![License](https://img.shields.io/github/license/Safaizal/nvim?style=flat)
+![Stars](https://img.shields.io/github/stars/Safaizal/nvim?style=flat)
 
 **A blazingly fast, heavily customized Neovim configuration built with lazy.nvim.**
 
