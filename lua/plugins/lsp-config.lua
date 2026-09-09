@@ -27,6 +27,7 @@ return {
           "vtsls",
           "clangd",
           "harper_ls",
+          "jinja_lsp"
         },
         automatic_installation = true,
         handlers = {
