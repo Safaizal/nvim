@@ -1,3 +1,13 @@
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.html",
+  callback = function(args)
+    local content = table.concat(vim.fn.readfile(args.match), "\n")
+    if content:find("{%%") or content:find("{{") or content:find("{#") then
+      vim.bo[args.buf].filetype = "htmldjango"
+    end
+  end,
+})
+
 return {
   {
     "williamboman/mason.nvim",
@@ -26,7 +36,6 @@ return {
           "html",
           "vtsls",
           "clangd",
-          "harper_ls",
           "jinja_lsp"
         },
         automatic_installation = true,
@@ -47,6 +56,12 @@ return {
                   },
                 },
               },
+            })
+          end,
+          ["jinja_lsp"] = function()
+            require("lspconfig").jinja_lsp.setup({
+              capabilities = capabilities,
+              filetypes = { "jinja", "htmldjango", "html" },
             })
           end,
         },
