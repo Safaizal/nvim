@@ -5,7 +5,7 @@ return {
 			options = {
 				mode = "buffers",
 				diagnostics = "nvim_lsp",
-				separator_style = "thin", -- options: "slant" | "slope" | "thick" | "thin"
+				separator_style = "thick", -- options: "slant" | "slope" | "thick" | "thin"
 				offsets = {
 					{
 						filetype = "neo-tree",
@@ -27,7 +27,7 @@ return {
 					fg = "#999999",
 				},
         separator_selected = {
-          fg = "#00ff11"
+          fg = "#00ff11",
         }
 			},
 		})
