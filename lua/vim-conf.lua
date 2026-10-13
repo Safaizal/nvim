@@ -1,18 +1,35 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set smartindent")
+-- Core editor options (vim.opt API; single source of truth for options)
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+
+-- Professional IDE defaults (options only, no new features)
+vim.opt.number = true
+vim.opt.signcolumn = "yes" -- keep gutter stable for gitsigns / diagnostics
+vim.opt.cursorline = true
+vim.opt.undofile = true -- persistent undo
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.updatetime = 250 -- faster CursorHold / gitsigns updates
+vim.opt.timeoutlen = 400 -- snappier which-key / key sequences
+vim.opt.scrolloff = 8 -- keep context around cursor
+vim.opt.wrap = false -- cleaner code view
 
 vim.g.mapleader = " "
 
--- Remap j to move up and k to move down in Normal, Visual, and Operator-pending modes
-vim.keymap.set({ "n", "v", "o" }, "j", "k", { noremap = true, silent = true })
-vim.keymap.set({ "n", "v", "o" }, "k", "j", { noremap = true, silent = true })
-
 -- to switch bufferline
-vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true })
+vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { silent = true, desc = "Previous buffer" })
+vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { silent = true, desc = "Next buffer" })
 
+-- Dismiss notifications with <Esc> without swallowing <Esc> itself,
+-- and clear search highlighting like a standard IDE setup.
 vim.keymap.set("n", "<Esc>", function()
-	require("notify").dismiss({ silent = true })
-end, { desc = "Dismiss nvim-notify popups" })
+  local ok, notify = pcall(require, "notify")
+  if ok then
+    notify.dismiss({ silent = true })
+  end
+  vim.cmd("nohlsearch")
+  return "<Esc>"
+end, { desc = "Dismiss notifications / clear highlight", expr = true, silent = true })

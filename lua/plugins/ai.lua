@@ -24,7 +24,7 @@ return {
         auto_trigger = true,
         debounce = 75,
         keymap = {
-          accept = "<TAB>" ,  -- Alt + l to accept the suggestion
+          accept = "<TAB>", -- Tab to accept the suggestion
           accept_word = false,
           accept_line = false,
           next = "<M-]>",     -- Alt + ] for next suggestion

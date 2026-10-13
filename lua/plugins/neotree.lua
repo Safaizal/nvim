@@ -6,7 +6,10 @@ return {
     "MunifTanjim/nui.nvim",
     "nvim-tree/nvim-web-devicons",
   },
-  lazy = false, -- neo-tree will lazily load itself
+  cmd = "Neotree",
+  keys = {
+    { "<leader>nt", "<cmd>Neotree filesystem reveal left<CR>", desc = "File explorer" },
+  },
   config = function()
     require("neo-tree").setup({
       window = {
@@ -14,6 +17,5 @@ return {
         width = 30
       }
     })
-    vim.keymap.set('n', '<leader>nt', ':Neotree filesystem reveal left<CR>', {})
   end
 }

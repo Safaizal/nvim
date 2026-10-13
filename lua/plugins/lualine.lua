@@ -3,7 +3,7 @@ return {
   config = function()
    require('lualine').setup({
       options = {
-        theme = 'custome'
+        theme = 'custom'
       },
       sections = {
         lualine_c = {

@@ -85,6 +85,7 @@ return {
 
 				theme = "thyrfing",
 				trve = true, -- switch this to false if you want light variants
+				transparent = false, -- let the terminal bg show through (full-terminal look, no box)
 			})
 			require("black-metal").load()
       vim.api.nvim_set_hl(0, "Visual", { fg = "#111111", bg = "#999999" })

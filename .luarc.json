@@ -1,9 +1,7 @@
 {
     "diagnostics.globals": [
         "vim",
-        "Snacks",
-        "lspconfig",
-        "local"
+        "Snacks"
     ],
     "diagnostics.disable": [
         "undefined-doc-name"
