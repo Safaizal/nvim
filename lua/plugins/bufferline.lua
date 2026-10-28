@@ -7,7 +7,7 @@ return {
 			options = {
 				mode = "buffers",
 				diagnostics = "nvim_lsp",
-				separator_style = "thick", -- options: "slant" | "slope" | "thick" | "thin"
+				separator_style = "slant", -- options: "slant" | "slope" | "thick" | "thin"
 				offsets = {
 					{
 						filetype = "neo-tree",

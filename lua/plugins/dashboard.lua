@@ -1,8 +1,7 @@
 return {
 	"folke/snacks.nvim",
-  -- Dashboard must be ready at startup; do not lazy-load it.
-  lazy = false,
-  priority = 1000,
+	lazy = false,
+	priority = 1000,
 	---@type snacks.Config
 	opts = {
 		dashboard = {
